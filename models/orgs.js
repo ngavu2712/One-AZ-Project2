@@ -1,16 +1,53 @@
 var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
+
 var sequelize = require("../config/connection.js");
 
-// Creates a "Chirp" model that matches up with DB
-var Chirp = sequelize.define("org", {
-  ID: Sequelize.STRING,
-  Email: Sequelize.STRING,
-  Phone: Sequelize.DATE
+
+var Org = sequelize.define("org", { 
+  ID: {
+      type: Sequelize.STRING,
+      primaryKey: true
+},
+  Email:{
+      type: Sequelize.STRING,
+      allowNull: false
+  },
+  Phone: {
+    type: Sequelize.STRING,
+    allowNull: false
+},
+  URL:{
+    type: Sequelize.STRING,
+    allowNull: true
+},
+  Description: {
+    type: Sequelize.TEXT,
+    allowNull: false
+},
+  Address: {
+    type: Sequelize.STRING,
+    allowNull: false
+},
+  Service1: {
+    type: Sequelize.STRING,
+    allowNull: false
+},
+  Service2:{
+    type: Sequelize.STRING,
+    allowNull: true
+},
+  Service3:{
+    type: Sequelize.STRING,
+    allowNull: true
+},
+  Service4:{
+    type: Sequelize.STRING,
+    allowNull: true
+}
 });
 
 // Syncs with DB
-Chirp.sync();
+Org.sync();
 
 // Makes the Chirp Model available for other files (will also create a table)
-module.exports = Chirp;
+module.exports = Org;
