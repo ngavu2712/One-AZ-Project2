@@ -8,15 +8,19 @@ var Org = sequelize.define("org", {
       type: Sequelize.INTEGER,
       primaryKey: true
 },
+  Name:{
+  type: Sequelize.STRING,
+  allowNull: false
+},
   Email:{
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: true
   },
   Phone: {
     type: Sequelize.STRING,
     allowNull: false
 },
-  URL:{
+  url:{
     type: Sequelize.STRING,
     allowNull: true
 },
@@ -24,24 +28,28 @@ var Org = sequelize.define("org", {
     type: Sequelize.TEXT,
     allowNull: false
 },
+Days: { 
+  type: Sequelize.TEXT,
+  allowNull: true
+},
   Address: {
     type: Sequelize.STRING,
     allowNull: false
 },
-  Service1: {
-    type: Sequelize.STRING,
-    allowNull: false
-},
-  Service2:{
-    type: Sequelize.STRING,
+  Food: {
+    type: Sequelize.BOOLEAN,
     allowNull: true
 },
-  Service3:{
-    type: Sequelize.STRING,
+  Shelter:{
+    type: Sequelize.BOOLEAN,
     allowNull: true
 },
-  Service4:{
-    type: Sequelize.STRING,
+  Daycare:{
+    type: Sequelize.BOOLEAN,
+    allowNull: true
+},
+  Mental_Health:{
+    type: Sequelize.BOOLEAN,
     allowNull: true
 }
 });
