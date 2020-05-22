@@ -5,7 +5,7 @@ var sequelize = require("../config/connection.js");
 
 var Org = sequelize.define("org", { 
   ID: {
-      type: Sequelize.STRING,
+      type: Sequelize.INTEGER,
       primaryKey: true
 },
   Email:{
