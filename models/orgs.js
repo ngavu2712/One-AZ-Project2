@@ -1,66 +1,57 @@
-var Sequelize = require("sequelize");
-
-var sequelize = require("../config/connection.js");
+module.exports = function(sequelize,DataTypes){
 
 
 var Org = sequelize.define("org", { 
   ID: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true
 },
   Name:{
-  type: Sequelize.STRING,
+  type: DataTypes.STRING,
   allowNull: false
 },
   Email:{
-      type: Sequelize.STRING,
+      type: DataTypes.STRING,
       allowNull: true
   },
   Phone: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false
 },
   url:{
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: true
 },
   Description: {
-    type: Sequelize.TEXT,
+    type: DataTypes.TEXT,
     allowNull: false
 },
-<<<<<<< HEAD
 Days: {
-  type: Sequelize.STRING,
-=======
-Days: { 
-  type: Sequelize.TEXT,
->>>>>>> 021d51580c21671ab262d3236f78162c52cdff43
+  type: DataTypes.STRING,
   allowNull: true
 },
   Address: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false
 },
   Food: {
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     allowNull: true
 },
   Shelter:{
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     allowNull: true
 },
   Daycare:{
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     allowNull: true
 },
   Mental_Health:{
-    type: Sequelize.BOOLEAN,
+    type: DataTypes.BOOLEAN,
     allowNull: true
 }
 });
 
-// Syncs with DB
-Org.sync();
+return Org
 
-// Makes the Chirp Model available for other files (will also create a table)
-module.exports = Org;
+}
