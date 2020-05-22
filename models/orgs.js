@@ -1,9 +1,9 @@
-var Sequelize = require("sequelize");
+//var Sequelize = require("sequelize");
 
-var sequelize = require("../config/connection.js");
+//var sequelize = require("../config/connection.js");
 
 
-var Org = sequelize.define("org", { 
+var Org = Sequelize.define("org", { 
   ID: {
       type: Sequelize.INTEGER,
       primaryKey: true
@@ -28,13 +28,8 @@ var Org = sequelize.define("org", {
     type: Sequelize.TEXT,
     allowNull: false
 },
-<<<<<<< HEAD
-Days: {
-  type: Sequelize.STRING,
-=======
 Days: { 
   type: Sequelize.TEXT,
->>>>>>> 021d51580c21671ab262d3236f78162c52cdff43
   allowNull: true
 },
   Address: {

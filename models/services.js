@@ -1,8 +1,8 @@
 var Sequelize = require("sequelize");
 
-var sequelize = require("../config/connection.js");
+//var sequelize = require("../config/connection.js");
 
-var Services = sequelize.define("org", {
+var Services = Sequelize.define("services", {
     ID: {
         type: Sequelize.INTEGER,
         primaryKey: true
