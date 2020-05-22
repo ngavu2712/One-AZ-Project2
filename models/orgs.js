@@ -28,8 +28,13 @@ var Org = sequelize.define("org", {
     type: Sequelize.TEXT,
     allowNull: false
 },
+<<<<<<< HEAD
+Days: {
+  type: Sequelize.STRING,
+=======
 Days: { 
   type: Sequelize.TEXT,
+>>>>>>> 021d51580c21671ab262d3236f78162c52cdff43
   allowNull: true
 },
   Address: {
