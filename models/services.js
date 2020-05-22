@@ -1,31 +1,30 @@
-var Sequelize = require("sequelize");
+module.exports = function(sequelize,DataTypes){
 
-var sequelize = require("../config/connection.js");
+
 
 var Services = sequelize.define("org", {
     ID: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey: true
     },
     Name:{
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     Description:{
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     Category: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     OrgId: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false
     }   
 })
 
-// Syncs with DB
-Services.sync();
+return Services
 
-module.exports = Services;
+}

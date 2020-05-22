@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes
-require("./routes/apiRoutes.js")(app);
+require("./routes/api-routes.js")(app);
 
 // Requiring our models for syncing
 var db = require("./models");
