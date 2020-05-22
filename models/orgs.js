@@ -8,9 +8,9 @@ var Org = sequelize.define("org", {
       type: Sequelize.INTEGER,
       primaryKey: true
 },
-  Email:{
-      type: Sequelize.STRING,
-      allowNull: false
+  Name:{
+    type: Sequelize.STRING,
+    allowNull: false
   },
   Phone: {
     type: Sequelize.STRING,
@@ -23,6 +23,10 @@ var Org = sequelize.define("org", {
   Description: {
     type: Sequelize.TEXT,
     allowNull: false
+},
+Days: {
+  type: Sequelize.STRING,
+  allowNull: true
 },
   Address: {
     type: Sequelize.STRING,
