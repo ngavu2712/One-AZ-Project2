@@ -14,21 +14,29 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+    res.render('index', function (err, html) {
+        res.send(html)
+      })
   });
 
   // cms route loads cms.html
   app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/login.handlebars"));
+    res.render('login', function (err, html) {
+        res.send(html)
+      })
   });
 
   // blog route loads blog.html
   app.get("/form", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/form.handlebars"));
+    res.render('form', function (err, html) {
+        res.send(html)
+      })
   });
 
   app.get("/create", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/create.handlebars"));
+    res.render('create', function (err, html) {
+        res.send(html)
+      })
   });
 
 };
