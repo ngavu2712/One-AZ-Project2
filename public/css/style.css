@@ -1,6 +1,6 @@
 
 #jumbo {
-    background-image: url("../image/bridge.png");
+    
     background-size: cover;
     opacity: .5;
     color: white;
@@ -13,3 +13,109 @@ body {
     background: radial-gradient(circle, rgba(174,208,238,1) 5%, rgba(148,233,210,1) 54%);  
 }
 
+/* =========== MEMBER SIGN UP==========================================================================================*/
+h2#account {
+    margin: 10px auto;
+    border-bottom: 2px solid royalblue;
+    color: royalblue;
+}
+
+div#member-signup {
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff;
+    margin: 30px auto 30px;
+    padding: 10px;
+    color: #333333;
+    border-radius: 8px;
+}
+#signup-btn {
+    width: 231px;
+    height: 41px;
+    color: white;
+    font-weight: bold;
+    margin: 20px 30px 20px 120px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, steelblue , royalblue);
+    text-align: center;
+    
+}
+
+#signin-btn{
+    width: 231px;
+    height: 41px;
+    color: white;
+    font-weight: bold;
+    margin: 20px 30px 20px 120px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, steelblue , royalblue);
+    text-align: center;
+}
+a {
+    color: rgb(163, 159, 159);
+}
+
+.google-button {
+    height: 40px;
+    border-width: 1px;
+    background: white;
+    color: #737373;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
+    transition-property: background-color, box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    margin: 5px 30px 20px 120px;
+
+    
+  }
+      
+  .google-button__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px 0 8px 8px;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+  }
+  
+  .google-button__icon--plus {
+    width: 30px;
+  }
+  
+  .google-button__text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto',arial,sans-serif;
+  }
+  
+/* =========== MEMBER SIGN IN ==========================================================================================*/
+div#member-signin {
+    width: 500px;
+    height: 450px;
+    background-color: #ffffff;
+    margin: 50px auto 50px;
+    padding: 10px;
+    color: #333333;
+    border-radius: 8px;
+
+}
+
+h2#signin {
+    margin: 30px auto;
+    border-bottom: 2px solid royalblue;
+    color: royalblue;
+}
+
+div#forgotu {
+    float: right;
+}
+div#forgotp {
+    float: left;
+}
+
+/* =====================================================================================================*/
