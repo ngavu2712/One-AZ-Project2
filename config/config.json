@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "Rabbit2712!",
-=======
     "password": "password",
->>>>>>> a06e246937cfb5274c075925c99b611380f43092
     "database": "azone",
     "host": "localhost",
     "dialect": "mysql",
@@ -13,11 +9,7 @@
   },
   "test": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "Rabbit2712!",
-=======
     "password": "password",
->>>>>>> a06e246937cfb5274c075925c99b611380f43092
     "database": "azone",
     "host": "localhost",
     "dialect": "mysql",
@@ -25,15 +17,9 @@
   },
   "production": {
     "username": "root",
-<<<<<<< HEAD
-    "password":"Rabbit2712!",
-    "database": "azone",
-    "host": "localhost",
-=======
     "password": "password",
     "database": "database_production",
     "host": "127.0.0.1",
->>>>>>> a06e246937cfb5274c075925c99b611380f43092
     "dialect": "mysql",
     "operatorsAliases": false
   }
