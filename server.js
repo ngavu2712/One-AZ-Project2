@@ -25,6 +25,7 @@ app.use(express.json());
 
 // Routes
 require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 // Requiring our models for syncing
 var db = require("./models");
