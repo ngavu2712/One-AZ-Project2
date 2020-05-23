@@ -1,0 +1,15 @@
+
+#jumbo {
+    background-image: url("../image/bridge.png");
+    background-size: cover;
+    opacity: .5;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Emilys Candy', cursive;
+}
+
+body {
+    background: rgb(174,208,238);
+    background: radial-gradient(circle, rgba(174,208,238,1) 5%, rgba(148,233,210,1) 54%);  
+}
+
