@@ -2,7 +2,7 @@ module.exports = function(sequelize,DataTypes){
 
 
 
-var Services = sequelize.define("org", {
+var Services = sequelize.define("services", {
     ID: {
         type: DataTypes.INTEGER,
         primaryKey: true
