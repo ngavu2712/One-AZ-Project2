@@ -16,9 +16,9 @@ $("#add-btn").on("click", function(event){
      
 
      $.ajax({
-         url: "/api/burgers",
+         url: "/api/orgs",
          method: "POST",
-          data : newBurger
+          data : orgInfo
      }).then(function(data){
          location.reload();
      })
@@ -26,17 +26,3 @@ $("#add-btn").on("click", function(event){
  })
 
 
-
- $(".eatburger").on("click", function(){
-     var id= $(this).attr("data-id")
-     
-     $.ajax({
-         url: "/api/burgers/"+ id,
-         method: "PUT"
-
-     }).then(function(data){
-         location.reload();
-     })
-
-
- })
