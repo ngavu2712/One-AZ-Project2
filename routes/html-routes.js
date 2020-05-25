@@ -40,6 +40,13 @@ module.exports = function(app) {
       })
   });
 
+  app.get("/food", function(req, res) {
+    res.render('food', function (err, html) {
+        res.send(html)
+      })
+  });
+
+
     app.get("/daycare", function(req, res) {
     res.render('daycare', function (err, html) {
         res.send(html)
