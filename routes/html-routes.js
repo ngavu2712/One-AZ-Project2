@@ -19,20 +19,21 @@ module.exports = function(app) {
       })
   });
 
-  // cms route loads cms.html
+  // login route
   app.get("/login", function(req, res) {
     res.render('login', function (err, html) {
         res.send(html)
       })
   });
 
-  // blog route loads blog.html
+  // Form route
   app.get("/form", function(req, res) {
     res.render('form', function (err, html) {
         res.send(html)
       })
   });
 
+  //Signup Route
   app.get("/create", function(req, res) {
     res.render('create', function (err, html) {
         res.send(html)
