@@ -1,7 +1,7 @@
 ///Dependencies
 //======================================================
 var db = require("../models");
-//var Org = require("../models/orgs.js");
+//var Org = require("../models/org.js");
 
 
 

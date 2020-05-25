@@ -1,0 +1,53 @@
+ <header>
+    <div class="container">
+       
+<h1>Bridge the Gap</h1>
+
+        <ul class="nav justify-content-end">
+
+          <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+        
+          <li class="nav-item">
+            <a class="nav-link active" href="/login">Login</a>
+          </li>
+       
+          <li class="nav-item">
+            <a class="nav-link" href="/create">Create a Login</a>
+          </li>        
+     
+          <li class="nav-item">
+            <a class="nav-link" href="/form">Add your Organization</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="/orgs">See All Our Partners</a>
+         </li>
+        </ul>
+
+    </div>
+</header>
+ 
+ <div class="container">
+
+    <div class="jumbotron">
+      <h1>Welcome to Bridge the Gap</h1>
+      <h3>The site that helps people!!</h3>
+    </div>
+
+      
+     <div class="jumbotron">
+         {{#each orgs}}  
+         <li>{{this.Name}}</li>
+         <li>{{this.Email}}</li>
+         <li>{{this.Phone}}</li>
+         <li>{{this.url}}</li>
+         <li>{{this.Description}}</li>
+         <li>{{this.Days}}</li>
+         <li>{{this.Address}}</li>
+         {{/each}}
+     </div>
+     
+   
+
+</div>
