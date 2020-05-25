@@ -16,7 +16,7 @@ $("#add-btn").on("click", function(event){
      
 
      $.ajax({
-         url: "/api/orgs",
+         url: "/api/org",
          method: "POST",
           data : orgInfo
      }).then(function(data){

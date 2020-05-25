@@ -2,10 +2,11 @@ module.exports = function(sequelize,DataTypes){
 
 
 var Org = sequelize.define("org", { 
-  ID: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-},
+  //ID: {
+   //   type: DataTypes.INTEGER,
+    //  primaryKey: true,
+    //  allowNull: true
+//},
   Name:{
   type: DataTypes.STRING,
   allowNull: false
@@ -24,7 +25,7 @@ var Org = sequelize.define("org", {
 },
   Description: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: true
 },
 Days: {
   type: DataTypes.STRING,
