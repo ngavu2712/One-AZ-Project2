@@ -39,12 +39,32 @@ module.exports = function(app) {
       })
   });
 
-  app.get("/login", function(req, res) {
-    res.render('login', function (err, html) {
+    app.get("/daycare", function(req, res) {
+    res.render('daycare', function (err, html) {
+        res.send(html)
+      })
+  });
+  app.get("/health", function(req, res) {
+    res.render('health', function (err, html) {
         res.send(html)
       })
   });
 
-  
+  app.get("/shelter", function(req, res) {
+    res.render('shelter', function (err, html) {
+        res.send(html)
+      })
+  });
+
+  app.get("/orgs", function(req, res) {
+    res.render('orgs', function (err, html) {
+        res.send(html)
+      })
+  });
+
+
+
+
+
 
 };
