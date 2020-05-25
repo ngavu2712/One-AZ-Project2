@@ -40,12 +40,32 @@ module.exports = function(app) {
       })
   });
 
-  //Food route
-  app.get("/food", function(req,res){
-    org.selectAll(function(orgdb){
-      res.render('food',{org : orgdb})
-    })
-  })
+    app.get("/daycare", function(req, res) {
+    res.render('daycare', function (err, html) {
+        res.send(html)
+      })
+  });
+  app.get("/health", function(req, res) {
+    res.render('health', function (err, html) {
+        res.send(html)
+      })
+  });
+
+  app.get("/shelter", function(req, res) {
+    res.render('shelter', function (err, html) {
+        res.send(html)
+      })
+  });
+
+  app.get("/orgs", function(req, res) {
+    res.render('orgs', function (err, html) {
+        res.send(html)
+      })
+  });
+
+
+
+
 
 
 };
