@@ -22,9 +22,21 @@ var firebaseConfig = {
   const email = $("#signup-email").val()
   const password = $("#signup-password").val()
 
-auth.createUserWithEmailAndPassword(email,password).then(cred => {
+auth.createUserWithEmailAndPassword(email,password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
 
+    if(errorCode === "auth/email-already-in-use"){
+        alert("email already in use")
+    }
+    
+  }).then(function(cred){
+ 
+    
     console.log(cred)
+    alert("Account Creation Successful!")
+    window.location.replace("/form")
 })
 
 })
