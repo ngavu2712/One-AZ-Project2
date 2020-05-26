@@ -41,9 +41,7 @@ module.exports = function(app) {
   });
 
   app.get("/food", function(req, res) {
-    res.render('food', function (err, html) {
-        res.send(html)
-      })
+    res.render('food', )
   });
 
 

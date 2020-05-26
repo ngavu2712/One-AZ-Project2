@@ -30,9 +30,13 @@ app.get("/api/org", function(req, res) {
 
   //create new org
   app.post("/api/org", function (req, res) {
+   console.log(req.body)
     console.log("Create a new org");
-
-
+     req.body.Food = req.body.Food==="food"?true:false;
+     req.body.Shelter = req.body.Shelter==="shelter"?true:false;
+     req.body.Daycare = req.body.Daycare==="daycare"?true:false;
+     req.body.Mental_Health = req.body.Mental_Health==="health"?true:false;
+     console.log(req.body)
     db.org.create({
         Name : req.body.Name,
         Email: req.body.Email,
