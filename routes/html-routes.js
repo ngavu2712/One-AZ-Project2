@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -40,8 +41,25 @@ module.exports = function(app) {
       })
   });
 
-  app.get("/food", function(req, res) {
-    res.render('food', )
+  app.get("/food/:orgId", function(req, res) {
+    var orgId = req.params.orgId; 
+    db.org.findAll({
+      where:{id: orgId}, 
+      include:[
+          { model: db.services , 
+            
+            }
+          ]
+       })
+       .then(function(result) {
+         console.log(result)
+
+       //  res.json(result)
+        res.render('food', {org: result})
+          
+     });
+     
+   
   });
 
 
