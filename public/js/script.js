@@ -12,8 +12,22 @@ var firebaseConfig = {
   //make and store firestore references 
   const auth = firebase.auth(); 
   const db = firebase.firestore(); 
-  db.settings({timestampsInSnapshots: true}) 
+  
 
+
+  
+
+  $("#sign-up").on("submit", function(event){
+   event.preventDefault()
+  const email = $("#signup-email").val()
+  const password = $("#signup-password").val()
+
+auth.createUserWithEmailAndPassword(email,password).then(cred => {
+
+    console.log(cred)
+})
+
+})
 
 $("#add-btn").on("click", function(event){
     event.preventDefault(); 
