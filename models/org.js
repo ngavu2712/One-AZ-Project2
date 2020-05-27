@@ -2,10 +2,11 @@ module.exports = function(sequelize,DataTypes){
 
 
 var Org = sequelize.define("org", { 
-  ID: {
-      type: DataTypes.INTEGER,
-      primaryKey: true
-},
+  //ID: {
+   //   type: DataTypes.INTEGER,
+    //  primaryKey: true,
+    //  allowNull: true
+//},
   Name:{
   type: DataTypes.STRING,
   allowNull: false
@@ -24,7 +25,7 @@ var Org = sequelize.define("org", {
 },
   Description: {
     type: DataTypes.TEXT,
-    allowNull: false
+    allowNull: true
 },
 Days: {
   type: DataTypes.STRING,
@@ -39,6 +40,7 @@ Days: {
     allowNull: true
 },
   Shelter:{
+    //type: DataTypes.STRING,
     type: DataTypes.BOOLEAN,
     allowNull: true
 },
@@ -51,6 +53,14 @@ Days: {
     allowNull: true
 }
 });
+
+Org.associate = function(models) {
+  // Associating Author with Posts
+  // When an Author is deleted, also delete any associated Posts
+  Org.hasMany(models.services, {
+    onDelete: "cascade"
+  });
+};
 
 return Org
 

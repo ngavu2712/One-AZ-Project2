@@ -1,7 +1,7 @@
 ///Dependencies
 //======================================================
 var db = require("../models");
-var Org = require("../models/orgs.js");
+//var Org = require("../models/org.js");
 
 
 
@@ -10,14 +10,14 @@ var Org = require("../models/orgs.js");
 module.exports = function(app) {
 
 //Get all orgs
-app.get("/api/orgs", function(req, res) {
+app.get("/api/org", function(req, res) {
     db.Org.findAll({}).then(function(dbOrg) {
       res.json(dbOrg);
     });
   });
 
   //Gets a specific org
-  app.get("/api/orgs/:id", function(req, res) {
+  app.get("/api/org/:id", function(req, res) {
     // Find one Org with the id in req.params.id and return them to the user with res.json
     db.Org.findOne({
       where: {
@@ -30,9 +30,16 @@ app.get("/api/orgs", function(req, res) {
 
   //create new org
   app.post("/api/org", function (req, res) {
+   console.log(req.body)
     console.log("Create a new org");
+     req.body.Food = req.body.Food==="food"?true:false;
+     req.body.Shelter = req.body.Shelter==="shelter"?true:false;
+     req.body.Daycare = req.body.Daycare==="daycare"?true:false;
+     req.body.Mental_Health = req.body.Mental_Health==="health"?true:false;
+     console.log(req.body)
 
-    db.Org.create({
+     
+    db.org.create({
         Name : req.body.Name,
         Email: req.body.Email,
         Phone: req.body.Phone,

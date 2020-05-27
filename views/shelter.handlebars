@@ -36,17 +36,17 @@
     </div>
 
       
+     {{#each org}}  
      <div class="jumbotron">
-         {{#each orgs}}  
-         <li>{{this.Name}}</li>
-         <li>{{this.Email}}</li>
-         <li>{{this.Phone}}</li>
-         <li>{{this.url}}</li>
-         <li>{{this.Description}}</li>
-         <li>{{this.Days}}</li>
-         <li>{{this.Address}}</li>
-         {{/each}}
+         <h4>{{dataValues.Name}}</h4>
+         <h4>{{dataValues.Email}}</h4>
+         <h4>{{dataValues.Phone}}</h4>
+         <h4>{{dataValues.url}}</h4>
+         <h4>{{dataValues.Description}}</h4>
+         <h4>{{dataValues.Days}}</h4>
+         <h4>{{dataValues.Address}}</h4>
      </div>
+      {{/each}}
      
    
 

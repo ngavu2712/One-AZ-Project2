@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -41,38 +42,69 @@ module.exports = function(app) {
   });
 
   app.get("/food", function(req, res) {
-    res.render('food', function (err, html) {
-        res.send(html)
-      })
+    //var orgId = req.params.orgId; 
+    db.org.findAll({
+      where:{Food: true}, 
+      //include:[
+          //{ model: db.services , 
+            
+            //}
+          //]
+       })
+       .then(function(result) {
+         console.log(result)
+
+       //  res.json(result)
+        res.render('food', {org: result})
+          
+     });
   });
 
 
     app.get("/daycare", function(req, res) {
-    res.render('daycare', function (err, html) {
-        res.send(html)
+      db.org.findAll({
+        where:{Daycare: true},
+      }).then(function(result){
+        console.log(result)
+        res.render('daycare', {org : result})
       })
+    //res.render('daycare', function (err, html) {
+        //res.send(html)
+      //})
   });
+
   app.get("/health", function(req, res) {
-    res.render('health', function (err, html) {
-        res.send(html)
-      })
+    db.org.findAll({
+      where:{Mental_Health: true},
+      }).then(function(result){
+        console.log(result)
+        res.render('health', {org : result})
+    //res.render('health', function (err, html) {
+        //res.send(html)
+      //})
   });
+});
 
   app.get("/shelter", function(req, res) {
-    res.render('shelter', function (err, html) {
-        res.send(html)
-      })
+    db.org.findAll({
+      where:{ Shelter: true},
+      }).then(function(result){
+        console.log(result)
+        res.render('shelter', {org : result})
+
+    //res.render('shelter', function (err, html) {
+        //res.send(html)
+      //})
   });
+});
 
   app.get("/orgs", function(req, res) {
-    res.render('orgs', function (err, html) {
-        res.send(html)
-      })
+    db.org.findAll({}).then(function(result){
+      console.log(result)
+        res.render('orgs', {org : result})
+    })
+    //res.render('orgs', function (err, html) {
+        //res.send(html)
+      //})
   });
-
-
-
-
-
-
-};
+}

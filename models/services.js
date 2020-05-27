@@ -3,10 +3,7 @@ module.exports = function(sequelize,DataTypes){
 
 
 var Services = sequelize.define("services", {
-    ID: {
-        type: DataTypes.INTEGER,
-        primaryKey: true
-    },
+     
     Name:{
         type: DataTypes.STRING,
         allowNull: false
@@ -18,13 +15,21 @@ var Services = sequelize.define("services", {
     Category: {
         type: DataTypes.STRING,
         allowNull: false
-    },
-    OrgId: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    }   
+    }
+    // OrgId: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // }   
 })
-
+Services.associate = function(models) {
+    // We're saying that a Post should belong to an Author
+    // A Post can't be created without an Author due to the foreign key constraint
+    Services.belongsTo(models.org, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 return Services
 
 }
