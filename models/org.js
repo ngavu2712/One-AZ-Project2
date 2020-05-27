@@ -40,6 +40,7 @@ Days: {
     allowNull: true
 },
   Shelter:{
+    //type: DataTypes.STRING,
     type: DataTypes.BOOLEAN,
     allowNull: true
 },

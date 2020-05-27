@@ -37,6 +37,8 @@ app.get("/api/org", function(req, res) {
      req.body.Daycare = req.body.Daycare==="daycare"?true:false;
      req.body.Mental_Health = req.body.Mental_Health==="health"?true:false;
      console.log(req.body)
+
+     
     db.org.create({
         Name : req.body.Name,
         Email: req.body.Email,
