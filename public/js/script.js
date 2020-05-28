@@ -1,3 +1,6 @@
+
+
+
 $(".checked").on("click", function(){
     //take the value of the name attribute from HTML checkbox input
       var orgValue = $(this).attr("name")
@@ -5,6 +8,7 @@ $(".checked").on("click", function(){
     //Assign the name value to the value attribute on checkbox input. 
       $(this).val(orgValue);
 })
+
 
 $("#add-btn").on("click", function(event){
     event.preventDefault(); 
