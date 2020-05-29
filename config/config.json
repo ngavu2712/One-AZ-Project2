@@ -2,7 +2,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Rabbit2712!",
+    "password": "password",
     "database": "azone",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -10,7 +10,7 @@
   },
   "test": {
     "username": "root",
-    "password": "Rabbit2712!",
+    "password": "password",
     "database": "azone",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -18,7 +18,7 @@
   },
   "production": {
     "username": "root",
-    "password": "Rabbit2712!",
+    "password": "password",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"

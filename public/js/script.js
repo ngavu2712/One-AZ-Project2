@@ -32,7 +32,7 @@ $("#add-btn").on("click", function(event){
          method: "POST",
           data : orgInfo
      }).then(function(data){
-         location.reload();
+         console.log(data)
      })
      
  })
