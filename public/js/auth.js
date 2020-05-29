@@ -115,6 +115,9 @@ $("#signOut").on("click", function (event) {
 
         }).then(function (cred) {
 
+            if(!cred){
+                return;
+            }
 
             console.log(cred)
             alert("Sign in Successful!")
