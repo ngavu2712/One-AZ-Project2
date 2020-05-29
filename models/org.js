@@ -62,6 +62,7 @@ Org.associate = function(models) {
   });
 };
 
+Org.sync()
 return Org
 
 }
