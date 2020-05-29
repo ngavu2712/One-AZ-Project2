@@ -121,8 +121,7 @@ $("#signOut").on("click", function (event) {
 
             console.log(cred)
             alert("Sign in Successful!")
-            email.empty()
-            password.empty()
+           
 
         })
 
