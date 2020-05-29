@@ -30,6 +30,8 @@ Services.associate = function(models) {
       }
     });
   };
+
+Services.sync()
 return Services
 
 }
