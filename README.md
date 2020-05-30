@@ -1,7 +1,7 @@
 # Bridge The Gap
-**Creator**: `Anna Vu, Joan Stoddard, Joewan Eiland, Barry Green`
+**Creators**: Anna Vu, Joan Stoddard, Joewan Eiland, Barry Green
 
-**Created on**: `May 16 2020`
+**Created on**: May 16 2020
 - - -
 
 Bridge The Gap is dedicated to families and individuals in Arizona who are seeking resources that hundreds of non-profit organizations are providing.
