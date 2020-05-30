@@ -1,16 +1,20 @@
 
+.container {
+    padding-top: 10px;
+}
 .jumbotron {
     background-size: cover;
-    opacity: .9;
+    opacity: 1;
     color: teal;
     font-weight: bolder;
-    font-family: 'Noto Serif', serif;
-    
+    /* font-family: 'Noto Serif', serif; */
+    height: 300px;
 }
 
 body {
-    background: rgb(8,72,82);
-    background: linear-gradient(90deg, rgba(8,72,82,1) 0%, rgba(23,162,184,1) 66%, rgba(8,76,83,1) 100%);
+    background: rgb(8,76,83);
+    background: linear-gradient(90deg, rgba(8,76,83,1) 0%, rgba(20,145,164,1) 50%, rgba(8,76,83,1) 100%);
+    
     font-family: 'Noto Serif', serif;
 }
 
@@ -122,20 +126,22 @@ div#forgotp {
     float: left;
 }
 
-/* =====================================================================================================*/
+/* ============================================= HOME PAGE ========================================================*/
 
 .slogan {
-    color: grey;
+    color: darkslategray;
 }
 
 #form {
     background-color: #d4e5e9;
 }
 
-.nav {
-    color: white;
+div#circle{
+    margin: 150px auto;
 }
 
 h1#logo {
     color: white;
+    margin-bottom: 50px;
+    font-size: 60px;
 }

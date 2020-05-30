@@ -1,29 +1,33 @@
 <header>
-    <div class="container">
-       
-<h1 id="logo">Bridge the Gap</h1 n>
 
-        <ul class="nav justify-content-end">
+  
+<div class="container">
+       
+<h1 id="logo">Bridge the Gap</h1>
+
+<nav class="navbar navbar-light" style="background-color:#d4e5e9; border-radius: 5px; margin-bottom:30px;">
+  <!-- Navbar content -->
+   <ul class="nav justify-content-end">
 
           <li class="nav-item">
-            <a class="nav-link active" href="/" style="color: white;">Home</a>
-          </li>
+                    <a class="nav-link" href="/" style="color: #382f3d;">Home</a>
+                </li>
         
           <li class="nav-item">
-            <a class="nav-link active" class="nav" href="/login" style="color: white;">Login</a>
-          </li>      
+            <a class="nav-link" href="/login" style="color: #382f3d;">Login</a>
+          </li>       
      
           <li class="nav-item">
-            <a class="nav-link" href="/form" style="color: white;">Add your Organization</a>
+            <a class="nav-link" href="/form" style="color: #382f3d;">Add your Organization</a>
           </li>          
           <li class="nav-item">
-            <a class="nav-link" href="/orgs" style="color: white;">See All Our Partners</a>
+            <a class="nav-link" href="/orgs" style="color: #382f3d;">See All Our Partners</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" id="signOut" style="color: white;" href="#">Sign Out</a>
+            <a class="nav-link" id="signOut" href="#" style="color: #382f3d;">Sign Out</a>
          </li>
         </ul>
-
+</nav>
     </div>
 </header>
 
@@ -33,17 +37,24 @@
       
     
     <div class="jumbotron" style = "background-image: url(../image/gap.png);">
-  <h3 class="slogan">Our mission is to build a bridge between families who are in need and local Arizona non-profit organizations.</h3>
+      <h3 class="slogan">Our mission is to build a bridge between families who are in need and local Arizona non-profit organizations.</h3>
       <hr>
-      
     </div>
-    <div class="row">
 
-      <div class="col-lg-8">
+
+    <div class="row" id="circle">
+
+      <button class="dot"><i class="fas fa-utensils fa-3x" style="size: 7px;"></i> <br> <a href="/food" style="color: #382f3d;">Food</a></button>
+      <button class="dot"><i class="fas fa-home fa-3x"></i> <br> <a href="/shelter" style="color: #382f3d;">Shelter</a></button>
+      <button class="dot"><i class="fas fa-child fa-3x"></i> <br> <a href="/daycare" style="color: #382f3d;">Daycare</a></button>
+      <button class="dot"><i class="fas fa-heartbeat fa-3x"></i> <br> <a href="/health" style="color: #382f3d;">Mental Health</a></button>
+
+
+      {{!-- <div class="col-lg-8">
 
         <div class="card mb-4" id="form">
           <div class="card-header"  >
-           Select the Area you are Looking for:
+           <h2 style="color: darkslategrey;">Select the Area you are Looking for:</h2>
           </div>
           <a href="/food" class="btn btn-info btn-lg">
             <span class="fa fa-heart"></span> Food</a>
@@ -63,7 +74,7 @@
             <span class="fa fa-asterisk"></span> Mental Health</a> 
 
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -83,5 +94,17 @@
     </div>
   </div>
 
+{{!-- import CSS --}}
+<style>
+.dot {
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color:#d5de29;
+  margin: auto;
+  font-size: 30px;
+  box-shadow: 0 0 10px #d5de29;
 
-
+}
+</style>
