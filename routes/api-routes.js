@@ -28,6 +28,18 @@ app.get("/api/org", function(req, res) {
     });
   });
 
+  app.get("/api/edit", function(req, res) {
+    
+    // db.Org.findOne({
+    //   where: {
+    //     Email: req.body.email
+    //   }
+    // }).then(function(dbOrg) {
+    //   res.json(dbOrg);
+    // });
+    console.log( req.body)
+  });
+
   //create new org
   app.post("/api/org", function (req, res) {
    console.log(req.body)
