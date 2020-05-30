@@ -1,28 +1,33 @@
 <header>
     <div class="container">
        
-<h1>Bridge the Gap</h1>
+      <h1 id="logo">Bridge the Gap</h1>
 
-        <ul class="nav justify-content-end">
+      <nav class="navbar navbar-light" style="background-color:#d4e5e9; border-radius: 5px; margin-bottom:30px;">
+  <!-- Navbar content -->
+   <ul class="nav justify-content-end">
 
           <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link" href="/" style="color: #382f3d;">Home</a>
                 </li>
         
           <li class="nav-item">
-            <a class="nav-link active" href="/login">Login</a>
+            <a class="nav-link" href="/login" style="color: #382f3d;">Login</a>
           </li>       
      
           <li class="nav-item">
-            <a class="nav-link" href="/form">Add your Organization</a>
+            <a class="nav-link" href="/form" style="color: #382f3d;">Add your Organization</a>
           </li>          
           <li class="nav-item">
-            <a class="nav-link" href="/orgs">See All Our Partners</a>
+            <a class="nav-link" href="/orgs" style="color: #382f3d;">See All Our Partners</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" id="signOut" href="#">Sign Out</a>
+            <a class="nav-link" id="signOut" href="#" style="color: #382f3d;">Sign Out</a>
          </li>
         </ul>
+</nav>
+
+       
 
     </div>
 </header>
@@ -30,18 +35,17 @@
 
 
 <div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to Bridge the Gap</h1>
-    <h3>The site that helps people!</h3>
+  <div class="jumbotron1">
+    <h2 style="color: white;">Welcome to Bridge the Gap</h2>
 
   </div>
   <div class="row">
 
-    <div class="col-lg-12">
+    <div class="col-lg-12" >
 
-      <div class="card">
+      <div class="card" id="form">
         <div class="card-header">
-          Add Your Organization
+          Add Your Organization and Create a Password
         </div>
         <div class="card-body">
           <form action="" method="POST" role="form" id="create">

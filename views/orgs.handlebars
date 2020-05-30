@@ -1,52 +1,100 @@
 <header>
     <div class="container">
        
-<h1>Bridge the Gap</h1>
+  <h1 id="logo">Bridge the Gap</h1>
 
-        <ul class="nav justify-content-end">
-              <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+       <nav class="navbar navbar-light" style="background-color:#d4e5e9; border-radius: 5px; margin-bottom:30px;">
+  <!-- Navbar content -->
+   <ul class="nav justify-content-end">
+
+          <li class="nav-item">
+                    <a class="nav-link" href="/" style="color: #382f3d;">Home</a>
                 </li>
-               
+        
           <li class="nav-item">
-            <a class="nav-link active" href="/login">Login</a>
-          </li>
-       
-          
+            <a class="nav-link" href="/login" style="color: #382f3d;">Login</a>
+          </li>       
+     
           <li class="nav-item">
-            <a class="nav-link" href="/form">Add your Organization</a>
+            <a class="nav-link" href="/form" style="color: #382f3d;">Add your Organization</a>
           </li>          
           <li class="nav-item">
-            <a class="nav-link" href="/orgs">See All Our Partners</a>
+            <a class="nav-link" href="/orgs" style="color: #382f3d;">See All Our Partners</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link" id="signOut" href="#">Sign Out</a>
+            <a class="nav-link" id="signOut" href="#" style="color: #382f3d;">Sign Out</a>
          </li>
         </ul>
+</nav>
 
     </div>
 </header>
 
  <div class="container">
 
-    <div class="jumbotron">
-      <h1>Welcome to Bridge the Gap</h1>
-      <h3>The site that helps people!!</h3>
+    <div class="jumbotron1">
+      <h2 style="color: white;">Our Partners</h2>
     </div>
 
       
      {{#each org}}  
-     <div class="jumbotron">
-         <h4>{{dataValues.Name}}</h4>
-         <h4>{{dataValues.Email}}</h4>
-         <h4>{{dataValues.Phone}}</h4>
-         <h4>{{dataValues.url}}</h4>
-         <h4>{{dataValues.Description}}</h4>
-         <h4>{{dataValues.Days}}</h4>
-         <h4>{{dataValues.Address}}</h4>
+     <div class="jumbotron1">
+       <button class="accordion">{{dataValues.Name}}</button>
+       <div class="panel">
+         <h6>Email: {{dataValues.Email}}</h6>
+         <h6>Work Phone: {{dataValues.Phone}}</h6>
+         <h6>URL: {{dataValues.url}}</h6>
+         <h6>Description: {{dataValues.Description}}</h6>
+         <h6>Business Hours: {{dataValues.Days}}</h6>
+         <h6>Address: {{dataValues.Address}}</h6> 
+       </div>
+       
+        
      </div>
       {{/each}}
-     
-   
-
 </div>
+
+{{!-- CSS --}}
+ <style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+
+{{!-- Javascript --}}
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
