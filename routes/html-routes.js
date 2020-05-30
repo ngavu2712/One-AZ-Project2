@@ -107,4 +107,15 @@ module.exports = function(app) {
         //res.send(html)
       //})
   });
+
+  app.get("/edit", function(req, res) {
+    res.render('edit', function (err, html) {
+        res.send(html)
+      })
+  });
+
 }
+
+
+
+
