@@ -1,15 +1,17 @@
 
-#jumbo {
+.jumbotron {
     background-size: cover;
-    opacity: .5;
-    color: white;
+    opacity: .9;
+    color: teal;
     font-weight: bolder;
-    font-family: 'Emilys Candy', cursive;
+    font-family: 'Noto Serif', serif;
+    
 }
 
 body {
-    background: rgb(174,208,238);
-    background: radial-gradient(circle, rgba(174,208,238,1) 5%, rgba(148,233,210,1) 54%);  
+    background: rgb(8,72,82);
+    background: linear-gradient(90deg, rgba(8,72,82,1) 0%, rgba(23,162,184,1) 66%, rgba(8,76,83,1) 100%);
+    font-family: 'Noto Serif', serif;
 }
 
 /* =========== MEMBER SIGN UP==========================================================================================*/
@@ -97,7 +99,7 @@ a {
 div#member-signin {
     width: 500px;
     height: 450px;
-    background-color: #ffffff;
+    background-color: #d4e5e9;
     margin: 50px auto 50px;
     padding: 10px;
     color: #333333;
@@ -109,8 +111,8 @@ div#member-signin {
 
 h2#signin {
     margin: 30px auto;
-    border-bottom: 2px solid royalblue;
-    color: royalblue;
+    border-bottom: 2px solid teal;
+    color: teal;
 }
 
 div#forgotu {
@@ -121,3 +123,19 @@ div#forgotp {
 }
 
 /* =====================================================================================================*/
+
+.slogan {
+    color: grey;
+}
+
+#form {
+    background-color: #d4e5e9;
+}
+
+.nav {
+    color: white;
+}
+
+h1#logo {
+    color: white;
+}
