@@ -13,7 +13,34 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+function fillForm(email) {
+//    var orgEmail = {
+//        email: email
+//    }
 
+   console.log(email)
+//    console.log(orgEmail)
+    $.ajax({
+        url: "/api/edit",
+        method: "GET",
+         data : email,
+         success: function(res) {
+            console.log(res);
+            alert(res);
+        }
+
+    }).then(function(data){
+        console.log(data)
+    })
+    
+      
+    
+  
+  }
+
+function userInfo(user){
+  $("#orgName").html(user.email)
+}
 
 
 
@@ -55,8 +82,9 @@ $("#add-btn").on("click", function (event) {
             Daycare: $("#daycare").val().trim(),
             Mental_Health: $("#health").val().trim(),
          }
+        
          console.log(orgInfo)
-    
+       
          $.ajax({
              url: "/api/org",
              method: "POST",
@@ -65,7 +93,7 @@ $("#add-btn").on("click", function (event) {
              console.log(data)
          })
         alert("Account Creation Successful!")
-        location.reload()
+        //location.reload()
 
         $(".checked").on("click", function(){
             //take the value of the name attribute from HTML checkbox input
@@ -121,8 +149,7 @@ $("#signOut").on("click", function (event) {
 
             console.log(cred)
             alert("Sign in Successful!")
-            email.empty()
-            password.empty()
+            
 
         })
 
@@ -138,8 +165,9 @@ $("#signOut").on("click", function (event) {
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          // ...
-
+          userInfo(user)
+          fillForm(email)
+          console.log(user.email)
           console.log("user is signed in")
         } else {
           // User is signed out.
